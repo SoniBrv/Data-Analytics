@@ -1,3 +1,5 @@
+SPRINT 3 Sonia Bravo
+
 USE transactions;
 
 /* Nivell 1
@@ -36,7 +38,7 @@ SHOW VARIABLES LIKE "secure_file_priv";
 
 ##C:\ProgramData\MySQL\MySQL Server 8.0\Uploads\
 
-/* Nivell 1 SPRINT 2
+/* Nivell 1 SPRINT 3
 - Exercici 2
 El departament de Recursos Humans ha identificat un error en el número de compte de l'usuari amb ID CcU-2938. La informació que ha de mostrar-se 
 per a aquest registre és: R323456312213576817699999. Recorda mostrar que el canvi es va realitzar.*/
@@ -47,7 +49,7 @@ update credit_card set iban = "R323456312213576817699999" where id = "CcU-2938";
 
 SELECT * FROM credit_card where id = "CcU-2938";
 
-/* Nivell 1 SPRINT 2
+/* Nivell 1 SPRINT 3
 - Exercici 3
 En la taula "transaction" ingressa un nou usuari amb la següent informació:
 Id	108B1D1D-5B23-A76C-55EF-C568E49A99DD
@@ -69,20 +71,20 @@ VALUES ('108B1D1D-5B23-A76C-55EF-C568E49A99DD', 'CcU-9999', 'b-9999', 9999, 82.9
 
 SELECT * FROM transaction WHERE company_id = 'b-9999';
 
-/* Nivell 1 SPRINT 2
+/* Nivell 1 SPRINT 3
 - Exercici 4
 Des de recursos humans et sol·liciten eliminar la columna "pan" de la taula credit_*card. Recorda mostrar el canvi realitzat.*/
 
 ALTER TABLE credit_card DROP COLUMN pan;
 
-/* Nivell 2 SPRINT 2
+/* Nivell 2 SPRINT 3
 Exercici 1
 Elimina de la taula transaction el registre amb ID 02C6201E-D90A-1859-B4EE-88D2986D3B02 de la base de dades.*/
 
 DELETE FROM transaction WHERE Id = '02C6201E-D90A-1859-B4EE-88D2986D3B02';
 SELECT * FROM transaction WHERE id = '02C6201E-D90A-1859-B4EE-88D2986D3B02';
 
-/* Nivell 2 SPRINT 2
+/* Nivell 2 SPRINT 3
 Exercici 2
 La secció de màrqueting desitja tenir accés a informació específica per a realitzar anàlisi i estratègies efectives.
  S'ha sol·licitat crear una vista que proporcioni detalls clau sobre les companyies i les seves transaccions. 
@@ -102,14 +104,14 @@ ORDER BY Mitjana_compres ASC;
 
 SELECT * FROM VistaMarketing;
 
-/* Nivell 2 SPRINT 2
+/* Nivell 2 SPRINT 3
 Exercici 3
 Filtra la vista VistaMarketing per a mostrar només les companyies que tenen el seu país de residència en "Germany"*/
 
 SELECT * FROM VistaMarketing
 WHERE country like "Germany" ;
 
-/* Nivell 3 SPRINT 2
+/* Nivell 3 SPRINT 3
 Exercici 1
 La setmana vinent tindràs una nova reunió amb els gerents de màrqueting.
  Un company del teu equip va realitzar modificacions en la base de dades, 
@@ -151,7 +153,7 @@ ALTER TABLE data_user RENAME COLUMN email to personal_email;
 /*ALTER TABLE credit_card CHANGE iban iban VARCHAR (50);   ### SERVEIX PERÒ MÉS CORRECTA LA SEGÜENT: Canviar Varchar a 250##*/
 ALTER TABLE credit_card MODIFY COLUMN iban VARCHAR (50);  ### CORRECTA: Canviar Varchar a 250##
     
-/* Nivell 3 SPRINT 2
+/* Nivell 3 SPRINT 3
 Exercici 2
 L'empresa també et sol·licita crear una vista anomenada "InformeTecnico" que contingui la següent informació:
 
